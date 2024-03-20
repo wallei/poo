@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases y Objetos en Python</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            position: relative;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .copy-code {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Clases y Objetos en Python</h1>
+</header>
+
+<section>
+    <h2>¿Qué es una Clase?</h2>
+    <p>En Python, una clase es una plantilla para crear objetos. Define las propiedades y los métodos comunes a todos los objetos de cierto tipo.</p>
+</section>
+
+<section>
+    <h2>¿Qué es un Objeto?</h2>
+    <p>Un objeto es una instancia de una clase. Es una entidad que tiene atributos y métodos específicos definidos por su clase.</p>
+</section>
+
+<section>
+    <h2>Instanciación de un Objeto en Python</h2>
+    <p>Para instanciar un objeto en Python, primero debes definir una clase utilizando la palabra clave <code>class</code>. Luego, puedes crear una instancia de esa clase utilizando la sintaxis <code>nombre_objeto = NombreClase()</code>.</p>
+    <p>A continuación, un ejemplo de cómo definir una clase llamada <code>Persona</code> con un atributo <code>nombre</code> y un método <code>saludar()</code>, y cómo instanciar un objeto de esta clase:</p>
+    <pre><code class="python">class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre
+    
+    def saludar(self):
+        print("Hola, soy", self.nombre)
+
+# Instanciación de un objeto
+juan = Persona("Juan")
+juan.saludar()</code></pre>
+    <span class="copy-code" onclick="copyCode()">Copy Code</span>
+</section>
+
+<script>
+    function copyCode() {
+        const codeElement = document.querySelector("section:last-child code");
+        const codeText = codeElement.innerText;
+        navigator.clipboard.writeText(codeText).then(function() {
+            alert("El código ha sido copiado al portapapeles.");
+        }).catch(function() {
+            alert("Error al copiar el código al portapapeles.");
+        });
+    }
+</script>
+
+</body>
+</html>
